@@ -6,15 +6,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Login } from './pages/login/Login.jsx'
 import { Home } from './pages/home/Home.jsx'
 import { Post } from './pages/post/Post.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Login />,
   },
   {
-    path: '/login',
-    element: <Login />,
+    path: '/home',
+    element: <Home />,
   },
   {
     path: '/post',
