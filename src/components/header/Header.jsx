@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Col, Container, Form, Nav, Navbar, Row } from 'react-bootstrap'
+import { Col, Container, Form, Nav, Navbar, Row } from 'react-bootstrap'
 
 export const Header = () => {
     return (
@@ -14,7 +14,7 @@ export const Header = () => {
                             height="30"
                             className="d-inline-block align-top"
                         />{' '}
-                        React Bootstrap
+                        JsonPlaceholder
                     </Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
@@ -28,15 +28,16 @@ export const Header = () => {
                             <Row>
                                 <Col xs="auto">
                                     <Form.Control
+                                        size='sm'
                                         type="text"
                                         placeholder="Acesso rápido"
                                         className=" mr-sm-2"
                                     />
                                 </Col>
                                 <Col xs="auto">
-                                <Navbar.Text>
-                            Signed in as: <a href="#login">Mark Otto</a>
-                        </Navbar.Text>
+                                    <Navbar.Text>
+                                        Signed in as: <a href="#login">Mark Otto</a>
+                                    </Navbar.Text>
                                 </Col>
                             </Row>
                         </Form>
