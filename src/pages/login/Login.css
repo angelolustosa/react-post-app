@@ -1,0 +1,13 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Alinha verticalmente */
+  width: 100%; /* Ocupa toda a largura */
+}
+
+.form-signin {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
