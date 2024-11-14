@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import './Login.css'
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export const Login = () => {
 
 
   return (
-    <div>
+    <div className='login-page'>
       <main className="form-signin w-100 m-auto">
         <form onSubmit={login}>
           <img className="mb-4" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" />
