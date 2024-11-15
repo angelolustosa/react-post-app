@@ -14,7 +14,7 @@ export const Login = () => {
     }
 
     if (formValues.email === 'adm' && formValues.senha === '123') {
-      alert('Login realizado com sucesso!')
+      //alert('Login realizado com sucesso!')
       navigate('/home')
     } else {
       alert('Login inválido!')
