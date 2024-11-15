@@ -27,6 +27,7 @@ const AutoCompleteInput = ({ options }) => {
 
     // Funções para controlar o foco no input
     const handleFocus = () => {
+        setIsFocused(true);
         setFilteredOptions(options); // Quando o input receber foco, exibe todas as opções
     };
 
@@ -38,8 +39,10 @@ const AutoCompleteInput = ({ options }) => {
         <div className="autocomplete-container" style={{ position: 'relative' }}>
             <InputGroup className="mb-3">
                 <Form.Control
+                size='sm'
                     type="text"
-                    placeholder="Digite para buscar..."
+                    placeholder="Acesso rápido"
+                    className=" mr-sm-2"
                     value={searchTerm}
                     onChange={handleSearch}
                     onFocus={handleFocus} // Adiciona a lógica para mostrar todas as opções ao focar

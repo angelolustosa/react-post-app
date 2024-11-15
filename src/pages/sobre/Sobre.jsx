@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Sobre = () => {
   return (
-    <div>Sobre</div>
+    <div className='page-container'>Sobre</div>
   )
 }

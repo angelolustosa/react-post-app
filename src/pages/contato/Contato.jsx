@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Contato = () => {
   return (
-    <div>Contato</div>
+    <div className='page-container'>Contato</div>
   )
 }

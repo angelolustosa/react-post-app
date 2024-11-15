@@ -1,3 +1,11 @@
 #root {
   text-align: center;
 }
+
+.page-container {
+  min-height: 80vh;
+}
+
+.MuiTablePagination-selectLabel, .MuiTablePagination-displayedRows  {
+  margin-top: 1em;
+}
