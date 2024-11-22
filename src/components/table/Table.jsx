@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import ThemeContext from '../../context/ThemeContext';
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
@@ -36,20 +38,33 @@ const rows = [
 
 const paginationModel = { page: 0, pageSize: 5 };
 
-export default function Table() {
+export default function Table(/* { isDarkMode } */) {
+    const { isDarkMode, toggleTheme } = React.useContext(ThemeContext);
+
+
+    // Create a theme with light or dark mode based on the state
+    const theme = createTheme({
+        palette: {
+            mode: isDarkMode ? 'dark' : 'light',
+        },
+    });
     return (
-        <Paper sx={{ height: 400, width: '100%' }}>
-            <DataGrid
-                rows={rows}
-                columns={columns}
-                initialState={{ pagination: { paginationModel } }}
-                pageSizeOptions={[5, 10]}
-                checkboxSelection
-                sx={{ border: 0 }}
-                slotProps={{
-                    pagination: { labelRowsPerPage: 'Linhas por Página' }
-                }}
-            />
-        </Paper>
+        <ThemeProvider theme={theme}>
+            <CssBaseline /> {/* Applies global styles based on theme */}
+
+            <Paper sx={{ height: 400, width: '100%' }}>
+                <DataGrid
+                    rows={rows}
+                    columns={columns}
+                    initialState={{ pagination: { paginationModel } }}
+                    pageSizeOptions={[5, 10]}
+                    checkboxSelection
+                    sx={{ border: 0 }}
+                    slotProps={{
+                        pagination: { labelRowsPerPage: 'Linhas por Página' }
+                    }}
+                />
+            </Paper>
+        </ThemeProvider>
     );
 }

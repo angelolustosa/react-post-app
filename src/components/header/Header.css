@@ -1,0 +1,8 @@
+.theme-change {
+    cursor: pointer;
+}
+
+.dark-theme {
+    background-color: #343a40;
+    color: #FFFFFF;
+}
